@@ -1,0 +1,11 @@
+display size will always be the same
+
+[] drag drop the name and number for these brands on to the table
+
+[] replace with drag and drop
+
+[] Need a UI that displays rows and columns
+[] Need interactive UI to replace the cells with products listed
+[] Need list of products
+[] spits out an excel file that can be printed
+[] saves old excel file and product list to DB for later use
