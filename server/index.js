@@ -9,7 +9,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
-import webpageRoutes from "./routes/webpages.js"
+import boxRoutes from "./routes/boxes.js"
 import { register } from "./controllers/auth.js";
 
 
@@ -44,7 +44,7 @@ app.post("/auth/register", register);
 
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
-app.use("/webpages", webpageRoutes);
+app.use("/box", boxRoutes);
 
 // heroku configs
 
@@ -57,10 +57,7 @@ app.get("*", (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}). then( () => {
+mongoose.connect(process.env.MONGO_URL). then( () => {
     app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
 
 }).catch ( (error) => console.log( `${error} did not connect`))

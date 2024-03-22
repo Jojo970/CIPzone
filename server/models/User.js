@@ -25,12 +25,6 @@ const UserSchema = new mongoose.Schema(
                 required: true,
                 min: 5
         },
-        friends: {
-            type: Array,
-            default: []
-        },
-        location: String,
-        occupation: String,
     }, {timestamps: true}
 );
 
